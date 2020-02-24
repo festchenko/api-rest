@@ -1,0 +1,9 @@
+{
+    "name": "Los Angeles",
+    "country": "United States of America",
+    "region": "California",
+    "lat": "34.052",
+    "lon": "-118.243",
+    "timezone_id": "America\/Los_Angeles",
+    "utc_offset": "-8.0"
+  }

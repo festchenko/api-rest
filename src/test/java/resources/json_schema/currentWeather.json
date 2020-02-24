@@ -1,0 +1,358 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "request",
+    "location",
+    "current"
+  ],
+  "properties": {
+    "request": {
+      "$id": "#/properties/request",
+      "type": "object",
+      "title": "The Request Schema",
+      "required": [
+        "type",
+        "query",
+        "language",
+        "unit"
+      ],
+      "properties": {
+        "type": {
+          "$id": "#/properties/request/properties/type",
+          "type": "string",
+          "title": "The Type Schema",
+          "default": "",
+          "examples": [
+            "City"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "query": {
+          "$id": "#/properties/request/properties/query",
+          "type": "string",
+          "title": "The Query Schema",
+          "default": "",
+          "examples": [
+            "New York, United States of America"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "language": {
+          "$id": "#/properties/request/properties/language",
+          "type": "string",
+          "title": "The Language Schema",
+          "default": "",
+          "examples": [
+            "en"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "unit": {
+          "$id": "#/properties/request/properties/unit",
+          "type": "string",
+          "title": "The Unit Schema",
+          "default": "",
+          "examples": [
+            "m"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "location": {
+      "$id": "#/properties/location",
+      "type": "object",
+      "title": "The Location Schema",
+      "required": [
+        "name",
+        "country",
+        "region",
+        "lat",
+        "lon",
+        "timezone_id",
+        "localtime",
+        "localtime_epoch",
+        "utc_offset"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/location/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "default": "",
+          "examples": [
+            "New York"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "country": {
+          "$id": "#/properties/location/properties/country",
+          "type": "string",
+          "title": "The Country Schema",
+          "default": "",
+          "examples": [
+            "United States of America"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "region": {
+          "$id": "#/properties/location/properties/region",
+          "type": "string",
+          "title": "The Region Schema",
+          "default": "",
+          "examples": [
+            "New York"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "lat": {
+          "$id": "#/properties/location/properties/lat",
+          "type": "string",
+          "title": "The Lat Schema",
+          "default": "",
+          "examples": [
+            "40.714"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "lon": {
+          "$id": "#/properties/location/properties/lon",
+          "type": "string",
+          "title": "The Lon Schema",
+          "default": "",
+          "examples": [
+            "-74.006"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "timezone_id": {
+          "$id": "#/properties/location/properties/timezone_id",
+          "type": "string",
+          "title": "The Timezone_id Schema",
+          "default": "",
+          "examples": [
+            "America/New_York"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "localtime": {
+          "$id": "#/properties/location/properties/localtime",
+          "type": "string",
+          "title": "The Localtime Schema",
+          "default": "",
+          "examples": [
+            "2020-02-24 04:34"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "localtime_epoch": {
+          "$id": "#/properties/location/properties/localtime_epoch",
+          "type": "integer",
+          "title": "The Localtime_epoch Schema",
+          "default": 0,
+          "examples": [
+            1582518840
+          ]
+        },
+        "utc_offset": {
+          "$id": "#/properties/location/properties/utc_offset",
+          "type": "string",
+          "title": "The Utc_offset Schema",
+          "default": "",
+          "examples": [
+            "-5.0"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "current": {
+      "$id": "#/properties/current",
+      "type": "object",
+      "title": "The Current Schema",
+      "required": [
+        "observation_time",
+        "temperature",
+        "weather_code",
+        "weather_icons",
+        "weather_descriptions",
+        "wind_speed",
+        "wind_degree",
+        "wind_dir",
+        "pressure",
+        "precip",
+        "humidity",
+        "cloudcover",
+        "feelslike",
+        "uv_index",
+        "visibility",
+        "is_day"
+      ],
+      "properties": {
+        "observation_time": {
+          "$id": "#/properties/current/properties/observation_time",
+          "type": "string",
+          "title": "The Observation_time Schema",
+          "default": "",
+          "examples": [
+            "09:34 AM"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "temperature": {
+          "$id": "#/properties/current/properties/temperature",
+          "type": "integer",
+          "title": "The Temperature Schema",
+          "default": 0,
+          "examples": [
+            7
+          ]
+        },
+        "weather_code": {
+          "$id": "#/properties/current/properties/weather_code",
+          "type": "integer",
+          "title": "The Weather_code Schema",
+          "default": 0,
+          "examples": [
+            113
+          ]
+        },
+        "weather_icons": {
+          "$id": "#/properties/current/properties/weather_icons",
+          "type": "array",
+          "title": "The Weather_icons Schema",
+          "items": {
+            "$id": "#/properties/current/properties/weather_icons/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0008_clear_sky_night.png"
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "weather_descriptions": {
+          "$id": "#/properties/current/properties/weather_descriptions",
+          "type": "array",
+          "title": "The Weather_descriptions Schema",
+          "items": {
+            "$id": "#/properties/current/properties/weather_descriptions/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "Clear"
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "wind_speed": {
+          "$id": "#/properties/current/properties/wind_speed",
+          "type": "integer",
+          "title": "The Wind_speed Schema",
+          "default": 0,
+          "examples": [
+            11
+          ]
+        },
+        "wind_degree": {
+          "$id": "#/properties/current/properties/wind_degree",
+          "type": "integer",
+          "title": "The Wind_degree Schema",
+          "default": 0,
+          "examples": [
+            250
+          ]
+        },
+        "wind_dir": {
+          "$id": "#/properties/current/properties/wind_dir",
+          "type": "string",
+          "title": "The Wind_dir Schema",
+          "default": "",
+          "examples": [
+            "WSW"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "pressure": {
+          "$id": "#/properties/current/properties/pressure",
+          "type": "integer",
+          "title": "The Pressure Schema",
+          "default": 0,
+          "examples": [
+            1018
+          ]
+        },
+        "precip": {
+          "$id": "#/properties/current/properties/precip",
+          "type": "number",
+          "title": "The Precip Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "humidity": {
+          "$id": "#/properties/current/properties/humidity",
+          "type": "integer",
+          "title": "The Humidity Schema",
+          "default": 0,
+          "examples": [
+            35
+          ]
+        },
+        "cloudcover": {
+          "$id": "#/properties/current/properties/cloudcover",
+          "type": "integer",
+          "title": "The Cloudcover Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "feelslike": {
+          "$id": "#/properties/current/properties/feelslike",
+          "type": "integer",
+          "title": "The Feelslike Schema",
+          "default": 0,
+          "examples": [
+            5
+          ]
+        },
+        "uv_index": {
+          "$id": "#/properties/current/properties/uv_index",
+          "type": "integer",
+          "title": "The Uv_index Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "visibility": {
+          "$id": "#/properties/current/properties/visibility",
+          "type": "integer",
+          "title": "The Visibility Schema",
+          "default": 0,
+          "examples": [
+            16
+          ]
+        },
+        "is_day": {
+          "$id": "#/properties/current/properties/is_day",
+          "type": "string",
+          "title": "The Is_day Schema",
+          "default": "",
+          "examples": [
+            "no"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  }
+}

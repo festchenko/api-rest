@@ -1,0 +1,9 @@
+{
+    "name": "San Francisco",
+    "country": "United States of America",
+    "region": "California",
+    "lat": "37.775",
+    "lon": "-122.418",
+    "timezone_id": "America\/Los_Angeles",
+    "utc_offset": "-8.0"
+  }

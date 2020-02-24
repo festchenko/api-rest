@@ -1,0 +1,63 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "success",
+    "error"
+  ],
+  "properties": {
+    "success": {
+      "$id": "#/properties/success",
+      "type": "boolean",
+      "title": "The Success Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "error": {
+      "$id": "#/properties/error",
+      "type": "object",
+      "title": "The Error Schema",
+      "required": [
+        "code",
+        "type",
+        "info"
+      ],
+      "properties": {
+        "code": {
+          "$id": "#/properties/error/properties/code",
+          "type": "integer",
+          "title": "The Code Schema",
+          "default": 0,
+          "examples": [
+            609
+          ]
+        },
+        "type": {
+          "$id": "#/properties/error/properties/type",
+          "type": "string",
+          "title": "The Type Schema",
+          "default": "",
+          "examples": [
+            "forecast_days_not_supported_on_plan"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "info": {
+          "$id": "#/properties/error/properties/info",
+          "type": "string",
+          "title": "The Info Schema",
+          "default": "",
+          "examples": [
+            "Your current subscription plan does not support weather forecast data. Please upgrade your account to use this feature."
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  }
+}
